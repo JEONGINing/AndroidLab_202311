@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:key="a1"
+        android:title="switch title"
+        android:summaryOn="on summary"
+        android:summaryOff="off summary" />
+
+    <EditTextPreference
+        android:key="id"
+        android:title="ID 설정" />
+
+    <!-- entries : 항목 선택을 위한 화면에 나열될 문자열
+        entryValues : 저장되는 값.
+     둘을 동일하게 줘도 되고, 다르게 줘도 되고. -->
+    <ListPreference
+        android:key="color"
+        android:title="색상 선택"
+        android:entries="@array/my_color"
+        android:entryValues="@array/my_color" />
+
+</PreferenceScreen>
