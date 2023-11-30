@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinator">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:id="@+id/appbar">
+        <!-- contentScrim - 스크롤 되어 접히다가, appBar의 구성이 나오기 힘들 때 칠할 색상
+             layout_scrollFlag - 스크롤 정책
+        -->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginBottom="50dp"
+                app:expandedTitleMarginStart="48dp"
+                app:title="AppBar Title"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <!-- layout_collapseMode - appbar가 접힐 때 개별 뷰들은 어떻게 움직일 것인가 -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/baseball"
+                    app:layout_collapseMode="parallax"
+                    android:id="@+id/appbarImageView"/>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    android:id="@+id/toolbar"/>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom"
+                    android:background="#00000000"
+                    app:layout_collapseMode="parallax"
+                    app:tabMode="scrollable"
+                    app:tabTextColor="#FFFFFF"
+                    android:id="@+id/tabs"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- layout_behavior 추가해야 같이 스크롤 됨. 단순 문자열이 아니라 클래스명.
+             coordinator에게 어느 클래스에 스크롤 정보를 전달하라는 클래스명
+        -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- drawer에 의해 끌려 나오는 부분
+    layout_gravity - 끌려 나오는 방향, left, right, start (언어 쓰는 방향)
+    -->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/menu_navigation"
+        android:id="@+id/navigationView"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

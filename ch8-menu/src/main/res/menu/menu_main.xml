@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu1"
+        android:title="menu1"/>
+<!--
+    속성을 platform api에서 처리하는 것이라면, http://schemas.android.com/apk/res/android 로
+    namespace 선언. 안드로이드 표준 속성이라는 의미이다.
+
+    속성을 비표준 api에서 처리한다면, 그 속성도 표준 속성이라고 볼 수 없다.
+    별도 url(http://schemas.android.com/apk/res-auto) 로 선언해서 등록해야 한다.
+
+    ActionBar는 하위호환성 문제가 있다. 이를 해결하기 위해서 appcompat의 AppCompatActivity를 상속 받았고,
+    AppCompatActivity에서 actionbar를 처리한다.
+-->
+    <item
+        android:id="@+id/menu2"
+        android:title="menu2"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu3"
+        android:title="menu3"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+
+</menu>

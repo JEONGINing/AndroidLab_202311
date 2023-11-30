@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ch9-Material</string>
+<!-- ActionBarDrawerToggle 생성자에 지정할 상태 표현 문자열 -->
+    <string name="drawer_opened">open drawer</string>
+    <string name="drawer_closed">close drawer</string>
+</resources>

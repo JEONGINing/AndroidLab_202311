@@ -19,6 +19,8 @@
             <option value="$PROJECT_DIR$/ch7-database" />
             <option value="$PROJECT_DIR$/ch7-file" />
             <option value="$PROJECT_DIR$/ch7-settings" />
+            <option value="$PROJECT_DIR$/ch8-menu" />
+            <option value="$PROJECT_DIR$/ch9-material" />
           </set>
         </option>
       </GradleProjectSettings>
