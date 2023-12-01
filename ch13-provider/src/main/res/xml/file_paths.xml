@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  외장 앱별 공간의 파일/폴더를 외부 앱에 공개하기 위해서.. 이곳에 명시된 것을 공개한다.
+      이 xml은 manifest에 등록되어야 한다. -->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path
+        name="myfiles"
+        path="Android/data/com.example.ch13_provider/files/Pictures" />
+</paths>

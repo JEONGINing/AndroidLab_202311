@@ -12,6 +12,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/ch11-receiver" />
+            <option value="$PROJECT_DIR$/ch12-service" />
+            <option value="$PROJECT_DIR$/ch13-provider" />
+            <option value="$PROJECT_DIR$/ch15-retrofit" />
             <option value="$PROJECT_DIR$/ch3-view" />
             <option value="$PROJECT_DIR$/ch4-layout" />
             <option value="$PROJECT_DIR$/ch5-event" />
